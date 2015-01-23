@@ -106,7 +106,7 @@ var mainFn = function(fn, num) {
 };
 
 var newFn = mainFn(function() {
-  console.log("Hello");
+  alert("Hello");
 }, 3);
 
 newFn();
