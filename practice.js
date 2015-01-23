@@ -21,8 +21,6 @@ inner();
 
 //Next problem
 
-
-
 var callFriend = function(){
   var friend = 'Jake';
   function callF(number){
@@ -36,11 +34,11 @@ var callFriend = function(){
 
   //Code Here
 
+var dialing = callFriend();
 
+dialing("435-215-9248");
 
 //Next Problem
-
-
 
 /*
   Write a function called makeCounter that makes the following code work properly.
