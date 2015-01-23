@@ -45,17 +45,21 @@ dialing("435-215-9248");
 */
 
   //Code Here
-  var count = makeCounter();
+var makeCounter = function() {
+  var count = 0;
+  return function() {
+    count++;
+    return count;
+  }
+};
+
+var count = makeCounter();
   count() // 1
   count() // 2
   count() // 3
   count() // 4
 
-
-
 //Next Problem
-
-
 
 /*
   Write a function that accepts another function as it's only argument and returns a new function
