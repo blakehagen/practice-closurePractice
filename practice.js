@@ -11,11 +11,13 @@ var outer = function(){
 
   //Code Here
 
+var inner = outer();
+
 //Once you do that, invoke inner.
 
   //Code Here
 
-
+inner();
 
 //Next problem
 
