@@ -69,5 +69,69 @@ var count = makeCounter();
 */
 
 
+var mainFn = function(fn) {
+  var called = false;
+  return function() {
+    if(called === false) {
+      fn();
+      called = true;
+    } else {
+      return "STOP";
+    }
+  }
+}
+
+var newFn = mainFn(function() {
+  alert("Here");
+});
+
+// to call function only N times:
+
+
+var mainFn = function(fn) {
+  var called = false;
+  return function() {
+    if(called === false) {
+      fn();
+      called = true;
+    } else {
+      return "STOP";
+    }
+  }
+}
+
+var newFn = mainFn(function() {
+  alert("Here");
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
