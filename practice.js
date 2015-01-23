@@ -88,50 +88,28 @@ var newFn = mainFn(function() {
 // to call function only N times:
 
 
-var mainFn = function(fn) {
+var mainFn = function(fn, num) {
   var called = false;
+  var count = 0;
   return function() {
+
     if(called === false) {
       fn();
-      called = true;
-    } else {
+      count++;
+    } 
+
+    if(count >= num) {
+      called = true
       return "STOP";
-    }
+    } 
   }
-}
+};
 
 var newFn = mainFn(function() {
-  alert("Here");
-});
+  console.log("Hello");
+}, 3);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+newFn();
 
 
 
