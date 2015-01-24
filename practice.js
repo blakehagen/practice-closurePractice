@@ -111,5 +111,29 @@ var newFn = mainFn(function() {
 
 newFn();
 
+//ean's way
+
+var fn = function(cb, numb) {
+  var counter = 0;
+  return function() {
+    if (counter < numb) {
+      counter++;
+      cb();
+    } else {
+      console.log("stop!");
+    }
+  }
+}
+
+var callback = function() {
+  console.log("Yay");
+}
+
+var inner = fn(callback, 3);
+
+inner();
+
+
+
 
 
